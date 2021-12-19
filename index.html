@@ -1,66 +1,180 @@
   <style>
-	  head{}
-	  body{
-	width: 100%; /* Ширина блока */
-    height: 100%;
+	head{}
+	body{
 	padding: 20px;
-	  }
+	background: url(https://html5book.ru/wp-content/uploads/2016/12/background78.png);
+	margin:0;
+	display: flex;
+	
+	float: right;
+	margin-right: 22.5%;
+	
+	}  
+	  
+	.block1{
+	height: 500;
+	width: 510;
+	
+	margin:10px;
+	}
+	  
    .layer {
-	background-color: white;
-    overflow: scroll; /* Добавляем полосы прокрутки */
+	background-color: snow;
+    overflow:scroll; /* Добавляем полосы прокрутки */
 	overflow-x: 50%;
 	overflow-y: 50%;
-    width: 500; /* Ширина блока */
-    height: 500; /* Высота блока */
+    width: 500; /* Ширина блока 68% */
+    height: 500; /* Высота блока 93% */
 	float: left;
     padding: 5px; /* Поля вокруг текста */
-    border: solid 1px black; /* Параметры рамки */
-   } 
-	  .DA{height: 25px}
-	  .but {
-		 width: 50px; 
+    border: solid 0.0px black;/* Параметры рамки */
+	border-radius: 10px;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 70%);
+    } 
+	  
+	.knopki {
+	width: 487px;
+	height: 185px;
+	float:left;
+	padding: 10px;
+	background-color: snow;
+	border: solid 0.0px black;
+	margin-top: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 50%);
+	}
+	
+	.in{
+	display: block;
+	margin-left: 10px;
 	  }
-	  .knopki {
-	padding-left: 4%;
-	float: left;
-	float: center;
+	  
+	.stroka{width: 233;
+	height: 25;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
 	  }
-	  .tablica{
-		  position: relative;
-		 padding-left:25px;
+	  
+	.stroka2{width: 302;
+	height: 25;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 18px;	
+		}
+	}
+	.DA{height: 25px
+	}
+	
+	.but {
+	width: 55px;
+	height: 25px;
+	text-decoration: none;
+    display: inline-block;
+	border-radius: 8px;
+	border: solid 0.0px snow;
+	background: snow;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 50%);
+	}
+	
+	.but:hover {
+	background: #2EE59D;
+  box-shadow: 0 15px 60px #2EE59D;
+  color: snow;
+  transform: translateY(-2px);	  
 	  }
-	  .script {
-		  float:left;
-		   padding-left: 4%;
+	 
+	.but2 {
+	width: 55px;
+	height: 25px;
+	text-decoration: none;
+    display: inline-block;
+	border-radius: 8px;
+	border: solid 0.0px snow;
+	background: snow;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 50%);
+	}
+	
+	.but2:hover {
+	background: red;
+  box-shadow: 0 15px 60px red;
+  color: snow;
+  transform: translateY(-2px);	  
 	  }
+	  
+	  .but3 {
+	width: 113px;
+	height: 25px;
+	text-decoration: none;
+    display: inline-block;
+	border-radius: 8px;
+	border: solid 0.0px snow;
+	background: snow;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 50%);
+	}
+	
+	.but3:hover {
+	background: blue;
+  box-shadow: 0 15px 60px blue;
+  color: snow;
+  transform: translateY(-2px);	  
+	  }
+
+	.script {
+	float:left;
+	margin: 10px;
+	min-height: 706;
+	width: 420;
+	padding: 10px;
+	background-color: snow;
+	border: solid 0.0px black;	
+	border-radius: 10px;
+    float: right;
+	box-shadow: 0px 8px 15px rgb(0 0 0 / 70%);
+	}
 	
   </style>
+<div class="block1">
 <div class="layer" id="t">
 <canvas   width=1100 height=1100></canvas><br>
 </div>
 
 <div class="knopki">
-<input class="DA" id=txt type=text placeholder=" введите функцию " />
-<button class="DA"  onclick="cl4()"> ⌫  </button>
-<button class="DA" onclick="cl3()"> С </button>
-<button class="DA" onclick="cl(),cl2()"> Очистить </button>
-<input class="DA" type="color" id="col" name="body" value="#000000">
+<div class="in">
+<input class="stroka" id=txt type=text placeholder=" введите функцию " />
+<button class="but"  onclick="cl4()"> ⌫  </button>
+<button class="but" onclick="cl3()"> С </button>
+<button class="but2" onclick="cl(),cl2()"> DEL </button>
+<input class="but" type="color" id="col" name="body" value="#000000">
 <pre id="outp"></pre>
 
-
-
-			 
-<table class="tablica" width="10" border="0">
+<table width="10" border="0">
   <tbody>
 	  <tr>
+		  <td><input  class="but" type="button" value="asinh(" onClick="txt.value+='asinh('"> </td>
+		  <td><input  class="but" type="button" value="asin(" onClick="txt.value+='asin('"> </td>
 		  <td><input  class="but" type="button" value="(" onClick="txt.value+='('"> </td>
 		  <td><input  class="but" type="button" value="sin(" onClick="txt.value+='sin('"></td>
 		  <td><input class="but" type="button" value="cos(" onClick="txt.value+='cos('"></td>
 		  <td><input class="but" type="button" value="tan(" onClick="txt.value+='tan('"></td>
 		  <td><input class="but" type="button" value="π" onClick="txt.value+='pi'"></td>
-		  <td><input class="but" type="button" value="e" onClick="txt.value+='e'"></td>
+		  <td><input class="but" type="button" value="-" onClick="txt.value+='-'"></td>
 	</tr>	  
     <tr>
+		<td><input  class="but" type="button" value="acosh(" onClick="txt.value+='acosh('"> </td>
+		<td><input  class="but" type="button" value="acos()" onClick="txt.value+='acos('"> </td>
 		<td><input  class="but" type="button" value=")" onClick="txt.value+=')'"> </td>
 		<td><input class="but" type="button" value="abs(" onClick="txt.value+='abs('"></td>
       <td><input class="but" type="button" value="7" onClick="txt.value+='7'"></td>
@@ -69,6 +183,8 @@
 	  <td><input class="but" type="button" value="*" onClick="txt.value+='*'"></td>
     </tr>
     <tr>
+		<td><input  class="but" type="button" value="atanh(" onClick="txt.value+='atanh('"> </td>
+		<td><input  class="but" type="button" value="atan(" onClick="txt.value+='atan('"> </td>
 		<td><input  class="but" type="button" value="x^2" onClick="txt.value+='^(2)'"> </td>
 		<td><input class="but" type="button" value="log(" onClick="txt.value+='log('"></td>
       <td><input class="but" type="button" value="4" onClick="txt.value+='4'"></td>
@@ -77,24 +193,29 @@
 	  <td><input class="but" type="button" value="/" onClick="txt.value+='/'"></td>
     </tr>
     <tr>
+		<td><input  class="but" type="button" value="cbrt(" onClick="txt.value+='cbrt('"> </td>
+		<td><input  class="but" type="button" value="sinh(" onClick="txt.value+='sinh('"> </td>
 		<td><input  class="but" type="button" value="x^3" onClick="txt.value+='^(3)'"> </td>
 		<td><input class="but" type="button" value="exp(" onClick="txt.value+='exp('"></td>
       <td><input class="but" type="button" value="1" onClick="txt.value+='1'"></td>
       <td><input class="but" type="button" value="2" onClick="txt.value+='2'"></td>
       <td><input class="but" type="button" value="3" onClick="txt.value+='3'"></td>
 	  <td><input class="but" type="button" value="+" onClick="txt.value+='+'"></td>
-		<tr>
+	</tr>	
+	  <tr>
+			<td><input  class="but" type="button" value="." onClick="txt.value+='.'"> </td>
+			<td><input  class="but" type="button" value="cosh(" onClick="txt.value+='cosh('"> </td>
 			<td><input  class="but" type="button" value="x^y" onClick="txt.value+='^('"> </td>
 			<td><input class="but" type="button" value="√" onClick="txt.value+='sqrt('"></td>
       <td><input class="but" type="button" value="x" onClick="txt.value+='x'"></td>
       <td><input class="but" type="button" value="0" onClick="txt.value+='0'"></td>
-      <td><input class="but" type="button" value="=" onclick="draw(),AddItem();"></td>
-	  <td><input class="but" type="button" value="-" onClick="txt.value+='-'"></td>
-    </tr>
+      <td colspan="2"><input class="but3" type="button" value="=" onclick="draw(),AddItem();"></td>
+	  </tr>
   </tbody>
 </table>
 </div>
-
+</div>
+</div>	
 <div class="script">
 
 <form name="form-bloggood-ru">
@@ -105,13 +226,15 @@
 <script>
 	
 //добавление полей в ввода
+	
 var u=1;
 		var items=0; 
 		function AddItem()		{ 
+
 div=document.getElementById("items");
 			button=document.getElementById("add"); items++;
-			newitem="<input type=\"text\" name=\"item\" id=\"q"+u+"\" value=\""+ document.getElementById("txt").value+"\"" + items; 
-			newitem+="\" size=\"37\"> <input type=\"button\" name=\"item\" value=\"X\" onClick=\"rem("+u+"),re()\">  <input type=\"color\" id=\"r"+u+"\" name=\"item\" value=\""+ document.getElementById("col").value+"\">   <br>" ; 
+			newitem="<input class=\"stroka2\" type=\"text\" name=\"item\" id=\"q"+u+"\" value=\""+ document.getElementById("txt").value+"\"" + items; 
+			newitem+="\" size=\"37\"> <input class=\"but2\" type=\"button\" name=\"item\" value=\"X\" onClick=\"rem("+u+"),re()\">  <input   class=\"but\" type=\"color\" id=\"r"+u+"\" name=\"item\" value=\""+ document.getElementById("col").value+"\">   <br>" ; 
 			var newnode=document.createElement("d");
 			newnode.id = u;
 			newnode.innerHTML=newitem;
@@ -119,40 +242,48 @@ div=document.getElementById("items");
 			u=u+1;
 }
 	
-	
+	// удаление выбранного поля
 	function rem(id) {
     var elem = document.getElementById(id);
     return elem.parentNode.removeChild(elem);
 }
-	
+
+
+// данные графика
 let scale = 20;
 let step = 1;
 let cnvs = document.querySelector('canvas');
 let ctx = cnvs.getContext('2d');
+document.getElementById('t').scrollTop += 300;
+document.getElementById('t').scrollLeft += 300;
 
+// первичный запуск отрисовки графика
 cl();
 
+//удаление добввленных полей
 function cl2(){
 document.getElementById("txt").value="";	
 for(let r = 1; r<u; r+=1) {	
 	
 var eleme=document.getElementById("q"+r);
-if(!eleme){} else {	rem(r)}
-	
-	
-	
-}}
-	
+if(!eleme){} else {	rem(r)}	
+}
+}
+
+//очистка текстового поля	
 function cl3(){
 document.getElementById("txt").value="";		
 }
+
+// одиночная очистка текстового поля
+function cl4(){
+document.getElementById("txt").value = document.getElementById("txt").value.substring(0, document.getElementById("txt").value.length - 1);
+}
 	
-	
+//отрисовка сетки графика	
 function cl(){
 
 const context = cnvs.getContext('2d'); context.clearRect(0, 0, cnvs.width, cnvs.height);
-
-
 
 ctx.lineWidth = 0.1;
 for (var i = step*scale; i < cnvs.width; i += step*scale) { //вертикальные
@@ -170,41 +301,35 @@ polyline('black', [[0, cnvs.height / 2], [cnvs.width, cnvs.height / 2]]);
 // ось Y
 polyline('black', [[cnvs.width / 2, 0], [cnvs.width / 2, cnvs.height]]);
 
+// отрисока координат
 ctx.strokeStyle = "black";
     ctx.lineWidth = 1;
     for (var i = 0; i < cnvs.width; i += 20) {
-        ctx.font = '10px Segoe UI';
+        ctx.font = '8px Segoe UI';
         labelX = i * 0.1/2;
 		labelX = labelX.toFixed(0); //toFixed - char after comma
 		if (i==0)
 		{ctx.strokeText((labelX), cnvs.width / 2+5 , cnvs.height / 2+10 ); } 
 		else
-		{ctx.strokeText((labelX), cnvs.width / 2 +10 , cnvs.height / 2+i+5 );
+		{ctx.strokeText(("-"+labelX), cnvs.width / 2 +10 , cnvs.height / 2+i+5 );
         ctx.strokeText((labelX) ,  cnvs.width / 2+i-1  , cnvs.height / 2 +15 );
 		 
 		ctx.strokeText((labelX), cnvs.width / 2 +10 , cnvs.height / 2-i+5 );
-        ctx.strokeText((labelX) ,  cnvs.width / 2-i-1  , cnvs.height / 2 +15 );
+        ctx.strokeText(("-"+labelX) ,  cnvs.width / 2-i-1  , cnvs.height / 2 +15 );
 		}
     }	}
-	
+
+
+// отрисовка функции	
 function draw(){
 	
+//замена	
+ var str = document.getElementById("txt").value;
 	
-var str = document.getElementById("txt").value;
-        var str = str.replace(new RegExp("sin","g"), "Math.sin");
-		var str = str.replace(new RegExp("cos","g"), "Math.cos");
-		var str = str.replace(new RegExp("tan","g"), "Math.tan");
-		var str = str.replace(new RegExp("pi","g"), "Math.PI");
-        var str = str.replace(new RegExp("e","g"), "Math.E");
-        var str = str.replace(new RegExp("abs","g"), "Math.abs");
-        var str = str.replace(new RegExp("round","g"), "Math.round");
-        var str = str.replace(new RegExp("ceil","g"), "Math.ceil");
-        var str = str.replace(new RegExp("floor","g"), "Math.floor");
-        var str = str.replace(new RegExp("log","g"), "Math.log");
-        var str = str.replace(new RegExp("exp","g"), "Math.exp");
-        var str = str.replace(new RegExp("sqrt","g"), "Math.sqrt");
-		
-    if (str.indexOf("^") > -1) {
+str = str.replace(/(sin|cos|tan|asin|acos|atan|pi|e|abs|exp|sqrt|sinh|cosh|asinh|acosh|atanh|cbrt)\(/g, "Math.$&");
+str = str.replace(/(ln)\(/g, "Math.log(");
+	
+if (str.indexOf("^") > -1) {
         var tab = [];
         var powfunc="Math.pow";
         var joker = "___joker___";
@@ -225,6 +350,7 @@ var str = document.getElementById("txt").value;
     }
 	
 	
+//обработка функции	
 let y = x => eval(str);
 
 ctx.lineWidth = 1;
@@ -235,39 +361,30 @@ for(let x = -cnvs.width/2; x<cnvs.width/2; x+=0.01) {
 polyline(document.getElementById("col").value, pts);
 }
 
+//функции отрисоки
 function polyline(color, pts) {
   ctx.strokeStyle = color;
   ctx.beginPath();
   pts.forEach((p, i) => i ? ctx.lineTo(...p) : ctx.moveTo(...p));
   ctx.stroke();
 }
-	
+	// отрисовка функций после удаления поля
 	function re(){
 	
-	cl();
-for(let r = 1; r<u; r+=1) {	
-	
+cl();
+// проверка на отрисоку функции
+for(let r = 1; r<u; r+=1) {		
 var eleme=document.getElementById("q"+r);
 if(!eleme){} else {
-
 var str = document.getElementById("q"+r).value;
-        var str = str.replace(new RegExp("sin","g"), "Math.sin");
-		var str = str.replace(new RegExp("cos","g"), "Math.cos");
-		var str = str.replace(new RegExp("tan","g"), "Math.tan");
-		var str = str.replace(new RegExp("pi","g"), "Math.PI");
-        var str = str.replace(new RegExp("e","g"), "Math.E");
-        var str = str.replace(new RegExp("asin","g"), "Math.asin");
-        var str = str.replace(new RegExp("acos","g"), "Math.acos");
-        var str = str.replace(new RegExp("atan","g"), "Math.atan");
-        var str = str.replace(new RegExp("abs","g"), "Math.abs");
-        var str = str.replace(new RegExp("round","g"), "Math.round");
-        var str = str.replace(new RegExp("ceil","g"), "Math.ceil");
-        var str = str.replace(new RegExp("floor","g"), "Math.floor");
-        var str = str.replace(new RegExp("log","g"), "Math.log");
-        var str = str.replace(new RegExp("exp","g"), "Math.exp");
-        var str = str.replace(new RegExp("sqrt","g"), "Math.sqrt");
-		
-    if (str.indexOf("^") > -1) {
+
+//замена
+       var str = document.getElementById("txt").value;
+	
+str = str.replace(/(sin|cos|tan|asin|acos|atan|pi|e|abs|exp|sqrt|sinh|cosh|asinh|acosh|atanh|cbrt)\(/g, "Math.$&");
+str = str.replace(/(ln)\(/g, "Math.log(");
+	
+if (str.indexOf("^") > -1) {
         var tab = [];
         var powfunc="Math.pow";
         var joker = "___joker___";
@@ -286,8 +403,10 @@ var str = document.getElementById("q"+r).value;
             });
         }
     }
+
 	
 	
+//обработка функции		
 let y = x => eval(str);
 
 ctx.lineWidth = 1;
@@ -297,10 +416,6 @@ for(let x = -cnvs.width/2; x<cnvs.width/2; x+=0.01) {
 }
 polyline(document.getElementById("r"+r).value, pts); }}
 }
-	function cl4(){
-        document.getElementById("txt").value = document.getElementById("txt").value.substring(0, document.getElementById("txt").value.length - 1);
-}
-document.getElementById('t').scrollTop += 300;
-    document.getElementById('t').scrollLeft += 300;
+
 </script>
 
