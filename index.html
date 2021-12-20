@@ -391,7 +391,6 @@ if(!eleme){} else {
 var str = document.getElementById("q"+r).value;
 
 //замена
-       var str = document.getElementById("txt").value;
 	
 str = str.replace(/(sin|cos|tan|asin|acos|atan|pi|e|abs|exp|sqrt|sinh|cosh|asinh|acosh|atanh|cbrt)\(/g, "Math.$&");
 str = str.replace(/(ln)\(/g, "Math.log(");
@@ -430,4 +429,3 @@ polyline(document.getElementById("r"+r).value, pts); }}
 }
 
 </script>
-
